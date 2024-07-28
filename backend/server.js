@@ -49,10 +49,10 @@ connection.connect((err) => {
 app.post('/register', async (req, res) => {
   const { name, email, password, company } = req.body;
 
-  console.log('Received registration data:', { name, email, password, company });
+  console.log(' data:', { name, email, password, company });
 
   if (!name || !email || !password || !company) {
-    console.log('Bad request: missing fields');
+    //console.log('Bad request: missing fields');
     return res.status(400).send('All fields are required');
   }
 

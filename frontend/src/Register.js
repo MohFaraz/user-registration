@@ -54,9 +54,9 @@ function Register() {
 
     try {
       const data1={ name:'aaaa', email:'aaaa@gmail.com', password:'aaaa@123',company:'aaaa' }
-      console.log("user entered data:"+data1)
+      // console.log("user entered data:"+data1)
       await axios.post('http://localhost:5000/register', { data1});
-      //console.log("user entered data:"+data1)
+      console.log("user entered data:"+{data1})
       alert('Registration successful');
     } catch (error) {
       alert('Registration failed:  ', error);
