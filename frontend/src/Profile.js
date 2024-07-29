@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Profile({ token }) {
   const [profile, setProfile] = useState({});
-
+  console.log(token)
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/profile', {
-          headers: { Authorization: `Bearer ${token}` }
+        const response = await axios.get("http://localhost:5000/api/users/me", {
+          headers: { Authorization: `Bearer ${token}` },
         });
+        console.log(response.data)
         setProfile(response.data);
       } catch (error) {
-        alert('Failed to fetch profile');
+        alert("Failed to fetch profile");
       }
     };
 
@@ -20,11 +21,11 @@ function Profile({ token }) {
   }, [token]);
 
   return (
-    <div>
+    <div className='profile'>
       <h1>Profile</h1>
       <p>Name: {profile.name}</p>
       <p>Email: {profile.email}</p>
-      <p>Phone: {profile.phone}</p>
+      <p>Company: {profile.company}</p>
     </div>
   );
 }

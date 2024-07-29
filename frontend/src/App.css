@@ -14,14 +14,13 @@ form {
   margin: 45px auto;
 }
 
- h5 {
-    font-size: larger;
+h5 {
+  font-size: larger;
   text-align: center;
   text-transform: uppercase;
-  color: #c6c6c6; 
-  margin:90px 0px 0px 0px;
+  color: #c6c6c6;
+  margin: 90px 0px 0px 0px;
 }
-
 
 .group {
   position: relative;
@@ -46,9 +45,10 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  outline:none;
+  outline: none;
 }
-input:focus ~ label, input:valid ~ label,
+input:focus ~ label,
+input:valid ~ label,
 textarea:focus ~ label,
 textarea:valid ~ label {
   top: -14px;
@@ -60,7 +60,7 @@ textarea:focus ~ .bar:before {
   width: 320px;
 }
 
-input[type=password] {
+input[type="password"] {
   letter-spacing: 0.3em;
 }
 
@@ -74,8 +74,6 @@ label {
   top: 10px;
   transition: 300ms ease all;
 }
-
-
 
 .btn {
   background: #fff;
@@ -95,7 +93,11 @@ label {
   color: #0f0d0d;
   background-color: #c6c6c6;
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
- }
-
-
-
+}
+.profile{
+  width: 100vw;
+  display: flex;
+  color: #c6c6c6;
+  flex-direction: column;
+  align-items: center;
+}
